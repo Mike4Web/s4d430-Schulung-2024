@@ -1,0 +1,34 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:
+{
+typeNamePlural: 'Bookings',
+title.value: 'Bookid',
+description.value: 'Passname'
+}
+annotate view ZC_09_Booking with
+{
+  /* Facets */
+  @UI.facet:
+   [
+   { position: 10, label: 'Booking Details', type: #FIELDGROUP_REFERENCE, targetQualifier: 'Details'}
+   ]
+
+  /* Fields */
+  @UI.lineItem: [{position: 10  }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 10 }]
+  Bookid;
+
+  @UI.lineItem: [{position: 20  }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 20 }]
+  Smoker;
+
+  @UI.lineItem: [{position: 30  }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 30 }]
+  Passname;
+
+  @UI.lineItem: [{position: 40  }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 40 }]
+  OrderDate;
+
+
+}
